@@ -63,6 +63,7 @@ const carts = [
 
 const regularTotals = calculateTotals(regularListings)
 const saleTotals = calculateTotals(saleListings)
+console.log(regularTotals(carts))
 
 regularTotals(carts).forEach(cart => console.log(`${cart.customer}, your total is ${cart.total}`))
 

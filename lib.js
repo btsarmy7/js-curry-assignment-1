@@ -28,16 +28,22 @@ const listedPrice =
 const calculateTotals =
   listings =>
     carts => {
-      return carts.map((cTotal) => [cTotal.customer , cTotal.items.reduce((a, b) => a + itemPrice(listings, b), 0)] )
+      return carts.map((cTotal) => cart(cTotal.customer , cTotal.items.reduce((a, b) => a + itemPrice(listings, b), 0)) )
+      //return cArray.map((subArray) => listing())
+      //return carts.map((cTotal) => [cTotal.customer , cTotal.items.reduce((a, b) => a + itemPrice(listings, b), 0)] )
       
     }
 
-// returns the price of an item given the listing array 
+// returns the price an item given the listing array 
 const itemPrice = (listingArray, Item) => {
       let a = listingArray.map((i) => listing(Item, listedPrice(i)(Item)))
       return (a.map((p) => p = p.price)).reduce((total, next) => total + next, 0)    
 }
      
+const list = (a, b) =>{
+  a, 
+  b
+}
     
 
 const regularListings = [

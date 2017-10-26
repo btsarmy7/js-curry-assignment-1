@@ -1,3 +1,4 @@
+
 'use strict'
 
 const {
@@ -63,8 +64,6 @@ const carts = [
 const regularTotals = calculateTotals(regularListings)
 const saleTotals = calculateTotals(saleListings)
 
-regularTotals(carts)
-  .forEach(cart => console.log(`${cart.customer}, your total is ${cart.total}`))
+regularTotals(carts).forEach(cart => console.log(`${cart.customer}, your total is ${cart.total}`))
 
-saleTotals(carts)
-  .forEach(cart => console.log(`${cart.customer}, your total could have been ${cart.total} if you were smart enough to come on a sale day! (you dummy)`))
+saleTotals(carts).forEach(cart => console.log(`${cart.customer}, your total could have been ${cart.total} if you were smart enough to come on a sale day! (you dummy)`))
